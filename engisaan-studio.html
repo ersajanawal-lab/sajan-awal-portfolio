@@ -48,6 +48,68 @@
     .studio-contact { text-align:center; max-width:760px; margin:auto; }
     .studio-contact .buttons { justify-content:center; }
     footer { padding:30px 0; color:#cbd7df; background:#102536; text-align:center; }
+    .project-video-card {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 28px;
+  align-items: center;
+  margin-top: 30px;
+  padding: 28px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  border-top: 5px solid var(--orange);
+  box-shadow: 0 2px 10px rgba(23, 50, 77, 0.05);
+}
+
+.project-video-copy .label {
+  color: var(--blue);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.project-video-copy h3 {
+  margin-top: 10px;
+  font-size: 1.45rem;
+}
+
+.project-video-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--blue);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.project-video-link:hover {
+  color: var(--orange);
+}
+
+.video-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  background: #102536;
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 780px) {
+  .project-video-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
     @media (max-width:780px) { .navlinks { display:none; } .hero-grid, .grid, .work, .process { grid-template-columns:1fr; } .mark { justify-self:start; order:-1; width:210px; } .hero, section { padding:62px 0; } }
   </style>
 </head>
@@ -111,6 +173,45 @@
         </div>
       </div>
     </section>
+    <section id="projects">
+  <div class="container">
+    <h2>Design Projects</h2>
+    <p class="lead">
+      A growing collection of architectural designs, construction documentation,
+      visualisations, and engineering videos by EngiSaan Studio.
+    </p>
+
+    <article class="project-video-card">
+      <div class="project-video-copy">
+        <p class="label">Project 01 · Residential Design</p>
+        <h3>Traditional Newari Residence for Mr. Krishna Siwakoti</h3>
+        <p>
+          A traditional Newari residence design project that reflects local
+          architectural character, cultural identity, and practical residential
+          design thinking.
+        </p>
+        <a
+          class="project-video-link"
+          href="https://youtu.be/WkO_U6u_NY8?si=aft6WCLwc7bhz1Go"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Watch on YouTube
+        </a>
+      </div>
+
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/WkO_U6u_NY8"
+          title="Traditional Newari Residence for Mr. Krishna Siwakoti"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </article>
+  </div>
+</section>
     <section id="contact" class="alt">
       <div class="container studio-contact">
         <h2>Let’s build better work</h2>
