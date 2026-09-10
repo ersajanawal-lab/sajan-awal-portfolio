@@ -103,7 +103,48 @@
   height: 100%;
   border: 0;
 }
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+  align-items: center;
+}
 
+.project-video-link {
+  display: inline-block;
+  padding: 10px 14px;
+  color: white;
+  background: var(--blue);
+  border: 2px solid var(--blue);
+  border-radius: 6px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.project-video-link:hover {
+  color: white;
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+.project-outline-button {
+  display: inline-block;
+  padding: 10px 14px;
+  color: var(--blue);
+  background: white;
+  border: 2px solid var(--blue);
+  border-radius: 6px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.project-outline-button:hover {
+  color: white;
+  background: var(--blue);
+}
 @media (max-width: 780px) {
   .project-video-card {
     grid-template-columns: 1fr;
@@ -119,11 +160,11 @@
       <nav>
         <a class="brand" href="index.html">Sajan Awal</a>
         <ul class="navlinks">
-          <li><a href="index.html">Portfolio</a></li>
-          <li><a href="#services">Focus areas</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+  <li><a href="index.html">Portfolio</a></li>
+  <li><a href="#projects">Design Projects</a></li>
+  <li><a href="#approach">My Approach</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
       </nav>
     </div>
   </header>
@@ -135,12 +176,12 @@
           <h1>EngiSaan<br>Studio</h1>
           <p class="tagline">Engineering ideas into buildable solutions.</p>
           <p>EngiSaan Studio is professional platform for construction design,planning, project documentation, BIM learning, engineering communication, and practical project-delivery work.</p>
-          <div class="buttons"><a class="button primary" href="#contact">Start a conversation</a><a class="button secondary" href="#services">Explore focus areas</a></div>
+          <div class="buttons">   <a class="button primary" href="#projects">View Design Projects</a>   <a class="button secondary" href="#approach">My Design Approach</a>   <a class="button secondary" href="#contact">Contact EngiSaan Studio</a> </div>
         </div>
         <div class="mark" aria-label="EngiSaan Studio mark"><span>ES</span></div>
       </div>
     </section>
-        <section>
+        <section id="approach">
       <div class="container">
         <h2>How I approach work</h2>
         <div class="process">
@@ -168,14 +209,19 @@
           architectural character, cultural identity, and practical residential
           design thinking.
         </p>
-        <a
-          class="project-video-link"
-          href="https://youtu.be/WkO_U6u_NY8?si=aft6WCLwc7bhz1Go"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Watch on YouTube
-        </a>
+        <div class="project-actions">
+  <a
+    class="project-video-link"
+    href="https://youtu.be/JGJgpJMVUNo?si=ZceMinQuD4TvSuV1"
+    target="_blank"
+    rel="noreferrer"
+  >
+    Watch on YouTube
+  </a>
+  <a class="project-outline-button" href="#contact">
+    Discuss a Similar Project
+  </a>
+</div>
       </div>
 
       <div class="video-frame">
@@ -197,14 +243,19 @@
       clear spatial organisation, practical buildability, and a refined
       architectural expression.
     </p>
-    <a
-      class="project-video-link"
-      href="https://youtu.be/JGJgpJMVUNo?si=ZceMinQuD4TvSuV1"
-      target="_blank"
-      rel="noreferrer"
-    >
-      Watch on YouTube
-    </a>
+    <div class="project-actions">
+  <a
+    class="project-video-link"
+    href="https://youtu.be/JGJgpJMVUNo?si=ZceMinQuD4TvSuV1"
+    target="_blank"
+    rel="noreferrer"
+  >
+    Watch on YouTube
+  </a>
+  <a class="project-outline-button" href="#contact">
+    Discuss a Similar Project
+  </a>
+</div>
   </div>
 
   <div class="video-frame">
