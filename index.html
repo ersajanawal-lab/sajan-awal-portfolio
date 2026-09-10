@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Sajan Awal, Civil Engineer and Construction Management Professional based in Sydney, Australia.">
+  <title>Sajan Awal | Civil Engineer & Construction Management</title>
+  <style>
+    :root { --navy:#17324d; --blue:#1d6fa5; --orange:#e5822b; --ink:#1e2935; --muted:#617080; --surface:#f4f7f8; --white:#fff; --line:#dce4e8; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--white); font-family:Arial, Helvetica, sans-serif; line-height:1.6; }
+    .container { width:min(1100px, calc(100% - 40px)); margin:auto; }
+    header { position:sticky; top:0; z-index:10; background:rgba(255,255,255,.96); border-bottom:1px solid var(--line); }
+    nav { min-height:70px; display:flex; justify-content:space-between; align-items:center; gap:20px; }
+    .brand { color:var(--navy); font-weight:800; font-size:1.15rem; text-decoration:none; }
+    .navlinks { display:flex; gap:20px; padding:0; margin:0; list-style:none; }
+    .navlinks a { color:var(--ink); text-decoration:none; font-size:.93rem; font-weight:700; }
+    .navlinks a:hover { color:var(--blue); }
+    .hero { background:linear-gradient(125deg, #eaf4f9, #fdfdfd 65%); padding:100px 0 90px; border-bottom:1px solid var(--line); }
+    .eyebrow { color:var(--orange); text-transform:uppercase; font-size:.8rem; font-weight:800; letter-spacing:.1em; }
+    h1 { color:var(--navy); font-size:clamp(2.5rem, 7vw, 4.8rem); line-height:1.05; letter-spacing:-.04em; margin:15px 0; }
+    .hero h2 { max-width:800px; color:var(--blue); font-size:clamp(1.1rem, 2vw, 1.5rem); margin:0 0 20px; font-weight:700; }
+    .lead { max-width:730px; color:var(--muted); font-size:1.08rem; }
+    .buttons { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+    .button { display:inline-block; border:2px solid var(--blue); border-radius:6px; padding:11px 18px; text-decoration:none; font-weight:800; }
+    .button.primary { background:var(--blue); color:white; }
+    .button.secondary { color:var(--blue); }
+    section { padding:78px 0; }
+    section.alt { background:var(--surface); }
+    h2 { color:var(--navy); font-size:2rem; margin:0 0 28px; }
+    h3 { color:var(--navy); margin:0 0 8px; }
+    p { margin:0 0 16px; }
+    .two-col { display:grid; grid-template-columns:1.35fr .9fr; gap:46px; }
+    .card { background:white; border:1px solid var(--line); border-radius:10px; padding:25px; }
+    .facts { margin:0; padding:0; list-style:none; }
+    .facts li { padding:11px 0; border-bottom:1px solid var(--line); }
+    .facts li:last-child { border-bottom:0; }
+    .timeline { display:grid; gap:18px; }
+    .role { border-left:4px solid var(--orange); background:white; border-radius:0 10px 10px 0; padding:24px; box-shadow:0 2px 10px rgba(23,50,77,.06); }
+    .meta { color:var(--blue); font-weight:800; margin-bottom:12px; }
+    .role ul { margin:12px 0 0; padding-left:20px; }
+    .role li { margin:7px 0; }
+    .grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; }
+    .grid .card h3 { color:var(--blue); }
+    .grid ul { padding-left:18px; margin:0; }
+    .grid li { margin:7px 0; }
+    .projects { display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; }
+    .project { border:1px solid var(--line); border-radius:10px; overflow:hidden; background:white; }
+    .project-top { height:10px; background:linear-gradient(90deg, var(--blue), var(--orange)); }
+    .project-content { padding:28px; }
+    .project-meta { color:var(--muted); font-size:.93rem; font-weight:700; }
+    .diary { color:white; background:linear-gradient(135deg, #17324d, #1d6fa5); }
+    .diary h2, .diary h3 { color:white; }
+    .diary .card { color:var(--ink); }
+    .contact { max-width:750px; text-align:center; margin:auto; }
+    .contact .buttons { justify-content:center; }
+    footer { padding:30px 0; color:#cbd7df; background:#102536; text-align:center; }
+    @media (max-width:780px) { .navlinks { display:none; } .two-col, .grid, .projects { grid-template-columns:1fr; } .hero, section { padding:60px 0; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#top">Sajan Awal</a>
+        <ul class="navlinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Civil Engineer · Construction Management</div>
+        <h1>Sajan Awal</h1>
+        <h2>Construction Project Professional, Planner, and Founder of Civil Engineer Diary</h2>
+        <p class="lead">Sydney-based civil engineer with 8+ years of contractor-side experience in building construction, site supervision, planning, project coordination, construction documentation, and project controls.</p>
+        <div class="buttons">
+          <a class="button primary" href="#contact">Get in touch</a>
+          <a class="button secondary" href="#experience">View experience</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container two-col">
+        <div>
+          <h2>About me</h2>
+          <p>I am currently completing a Master of Construction Management at CQUniversity Australia in Sydney, with expected completion in July 2027. I am pursuing Project Engineer and Assistant Project Manager opportunities where I can combine practical site experience with Australian construction knowledge.</p>
+          <p>My experience includes site inspections, quality and safety monitoring, quantity take-offs, bar bending schedules, payment claims, progress reporting, resource-loaded scheduling, procurement support, and coordination with clients, consultants, subcontractors, and site teams.</p>
+          <p>I value safe delivery, accurate documentation, clear communication, and practical problem-solving across every stage of construction.</p>
+        </div>
+        <aside class="card">
+          <h3>Quick facts</h3>
+          <ul class="facts">
+            <li><strong>Based:</strong> Sydney, NSW, Australia</li>
+            <li><strong>Experience:</strong> 8+ years in construction</li>
+            <li><strong>Education:</strong> MCM, CQUniversity</li>
+            <li><strong>Focus:</strong> Project engineering and management</li>
+            <li><strong>Community:</strong> Founder, Civil Engineer Diary</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="experience" class="alt">
+      <div class="container">
+        <h2>Professional experience</h2>
+        <div class="timeline">
+          <article class="role">
+            <h3>Construction Project Manager</h3>
+            <p class="meta">GIETC-Raman JV · Raman Construction Pty Ltd · Oct 2018 – May 2025</p>
+            <p><strong>Dharahara Reconstruction, Sundhara, Kathmandu</strong> · Client: Government of Nepal, Ministry of Urban Development · Project value: NPR 3.48 billion (approximately AUD 36.5 million).</p>
+            <ul>
+              <li>Planned, scheduled, and coordinated day-to-day site activities against drawings, specifications, and contract requirements.</li>
+              <li>Supervised excavation, piling, reinforcement, concrete, formwork, masonry, façade, structural steel, and finishing works.</li>
+              <li>Prepared progress reports, Interim Payment Certificates, variation information, and claim records.</li>
+              <li>Coordinated consultants, clients, contractors, procurement, equipment, labour, and documentation control.</li>
+            </ul>
+          </article>
+          <article class="role">
+            <h3>Site Engineer</h3>
+            <p class="meta">Lama-Raman JV · Raman Construction Pty Ltd · Dec 2016 – Sep 2018</p>
+            <p><strong>Dharmashala Building and Allied Works, Tilganga, Kathmandu</strong> · Client: Embassy of India · Project value: NPR 250 million (approximately AUD 2.76 million).</p>
+            <ul>
+              <li>Performed site surveys, setting out, and layout from approved architectural and structural drawings.</li>
+              <li>Supported daily supervision, quality, safety, and specification compliance for a 400-bed building project.</li>
+              <li>Prepared bar bending schedules, estimates, payment claims, and daily/monthly progress reports.</li>
+            </ul>
+          </article>
+          <article class="role">
+            <h3>Engineer</h3>
+            <p class="meta">Department of Urban Development and Building Construction · Jun 2016 – Dec 2016</p>
+            <ul>
+              <li>Provided technical assistance and construction inspections for earthquake-resistant building works.</li>
+              <li>Supported weekly reporting, local implementation, construction-stage verification, and technical compliance.</li>
+            </ul>
+          </article>
+          <article class="role">
+            <h3>Civil Engineer</h3>
+            <p class="meta">Bijaya Engineering Consultancy Pty Ltd · Dec 2015 – Jun 2016</p>
+            <ul>
+              <li>Prepared architectural and structural drawings using AutoCAD and ETABS.</li>
+              <li>Completed site measurement, layout, estimates, valuations, and tender documentation for residential projects.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2>Capabilities and tools</h2>
+        <div class="grid">
+          <div class="card"><h3>Project delivery</h3><ul><li>Site supervision and coordination</li><li>Construction planning and reporting</li><li>Quality and safety monitoring</li><li>Subcontractor and stakeholder coordination</li><li>Procurement support</li></ul></div>
+          <div class="card"><h3>Commercial and technical</h3><ul><li>Quantity take-offs and BOQs</li><li>Bar bending schedules</li><li>Payment claims and variations</li><li>Construction documentation</li><li>Cost estimates and valuations</li></ul></div>
+          <div class="card"><h3>Digital tools</h3><ul><li>AutoCAD and Civil 3D</li><li>MS Project and Primavera P6</li><li>Microsoft Excel and Power BI</li><li>ETABS and SketchUp</li><li>Revit-based documentation (developing)</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="alt">
+      <div class="container">
+        <h2>Selected projects</h2>
+        <div class="projects">
+          <article class="project"><div class="project-top"></div><div class="project-content"><h3>Dharahara Reconstruction</h3><p class="project-meta">Kathmandu, Nepal · 2018–2025</p><p>A major heritage reconstruction project in Sundhara, Kathmandu. Supported coordination and delivery across structural, architectural, site-management, planning, procurement, quality, safety, and progress-reporting activities.</p></div></article>
+          <article class="project"><div class="project-top"></div><div class="project-content"><h3>Dharmashala Building</h3><p class="project-meta">Tilganga, Kathmandu · 2016–2018</p><p>A 400-bed building project delivered for the Embassy of India. Completed site engineering responsibilities including survey, setting out, supervision, quantity work, progress reporting, payment claims, and compliance support.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="diary">
+      <div class="container two-col">
+        <div>
+          <h2>Civil Engineer Diary</h2>
+          <h3>Connecting engineers through practical knowledge</h3>
+          <p>As founder of Civil Engineer Diary, I share civil and architectural engineering insights, site stories, learning resources, and career-focused content for a global engineering community.</p>
+          <div class="buttons"><a class="button primary" style="background:white;color:#17324d;border-color:white" href="https://www.instagram.com/civilengineer.diary/" target="_blank" rel="noreferrer">Visit @civilengineer.diary</a></div>
+        </div>
+        <aside class="card"><h3>Community focus</h3><ul><li>Practical civil-engineering insights</li><li>Construction site stories and learning</li><li>Career development for engineers</li><li>Accessible technical content</li></ul></aside>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact">
+        <h2>Let's connect</h2>
+        <p>I am open to Project Engineer and Assistant Project Manager opportunities in Sydney, as well as conversations about construction management, civil engineering, digital project delivery, and Civil Engineer Diary.</p>
+        <div class="buttons">
+          <a class="button primary" href="mailto:ersajanawal@gmail.com">Email me</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/awalsajan" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="button secondary" href="https://github.com/ersajanawal-lab" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container">&copy; 2026 Sajan Awal · Civil Engineer & Construction Management Professional</div></footer>
+</body>
+</html>
