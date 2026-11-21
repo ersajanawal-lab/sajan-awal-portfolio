@@ -47,7 +47,8 @@ th{position:relative}td:first-child{position:relative}.rzc{position:absolute;rig
 <script>
 /* ===== BETA SETTINGS — fill in once before publishing ===== */
 const BETA=true;
-const CFG={SUPABASE_URL:'https://xxjlfbesureikjeydkzf.supabase.co/rest/v1/',SUPABASE_ANON_KEY:'sb_publishable_vbdGonWmlHT67MoFWQEbXQ_d4ecmbG9',CONTACT:'awalsajan18@gmail.com',GRACE_DAYS:7,VERSION:'0.9.0-beta'};
+// SUPABASE_URL = your project URL (https://xxxx.supabase.co).  SUPABASE_ANON_KEY = the PUBLISHABLE key (sb_publishable_...) or the legacy anon key. NEVER the secret/service key.
+const CFG={SUPABASE_URL:'https://xxjlfbesureikjeydkzf.supabase.co/rest/v1/',SUPABASE_ANON_KEY:'sb_publishable_vbdGonWmlHT67MoFWQEbXQ_d4ecmbG9',CONTACT:'ersajanawal@gmail.com',GRACE_DAYS:14,VERSION:'0.9.0-beta'};
 /* =========================================================== */
 const SEED={};
 const $=s=>document.querySelector(s),N=v=>+v||0,f2=n=>N(n).toLocaleString(undefined,{maximumFractionDigits:2}),f0=n=>N(n).toLocaleString(undefined,{maximumFractionDigits:0}),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])),uid=()=>Math.random().toString(36).slice(2,7),today=()=>new Date().toLocaleDateString('en-CA');
@@ -354,7 +355,7 @@ function render(){if(!U)return;LOCK=tab=='rep'&&cd>today();document.documentElem
 /* ---- product key (beta licensing, checked against the cloud on every open) ---- */
 const LK='cpm_lic';let LIC=null;
 const devId=()=>{let d='';try{d=localStorage.cpm_dev||''}catch(e){}if(!d){d=(crypto.randomUUID?crypto.randomUUID():uid()+uid()+uid());try{localStorage.cpm_dev=d}catch(e){}}return d};
-async function rpc(fn,body){const r=await fetch(CFG.SUPABASE_URL+'/rest/v1/rpc/'+fn,{method:'POST',headers:{'Content-Type':'application/json',apikey:CFG.SUPABASE_ANON_KEY,Authorization:'Bearer '+CFG.SUPABASE_ANON_KEY},body:JSON.stringify(body)});if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}
+async function rpc(fn,body){const K=String(CFG.SUPABASE_ANON_KEY).trim(),B=String(CFG.SUPABASE_URL).trim().replace(/^(?!https?:\/\/)/,'https://').replace(/\/+$/,'').replace(/\/rest\/v1$/,''),h={'Content-Type':'application/json',apikey:K};if(/^eyJ/.test(K))h.Authorization='Bearer '+K;const r=await fetch(B+'/rest/v1/rpc/'+fn,{method:'POST',headers:h,body:JSON.stringify(body)});if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}
 const checkKey=key=>rpc('check_license',{p_key:key,p_device:devId(),p_version:CFG.VERSION});
 const LWHY={invalid:'This product key is not valid.',revoked:'This product key has been revoked.',expired:'This product key has expired.',device_limit:'This key is already active on the maximum number of devices. Deactivate it on another device first, or contact the publisher.'};
 function showKey(msg){$('#launcher').style.display='none';$('#login').style.display='none';$('#app').style.display='none';$('#keyscreen').style.display='flex';$('#kmsg').textContent=msg||'';$('#kct').textContent=CFG.CONTACT?'Need a key? '+CFG.CONTACT:''}
@@ -370,7 +371,7 @@ async function licenseGate(){let L=null;try{L=JSON.parse(localStorage[LK]||'null
  showKey('');return false}
 async function activate(e){e.preventDefault();const key=e.target.k.value.trim().toUpperCase();if(!key)return false;$('#kmsg').textContent='Checking…';
  try{const r=await checkKey(key);if(r&&r.valid){LIC={key,holder:r.holder||'',plan:r.plan||'',expires:r.expires_at||'',lastOk:Date.now(),offline:false};saveLic(LIC);$('#keyscreen').style.display='none';await boot()}else $('#kmsg').textContent=LWHY[r&&r.reason]||'This product key could not be verified.'}
- catch(x){$('#kmsg').textContent='Cannot reach the license server. Check your internet connection and try again.'}return false}
+ catch(x){const m=String(x&&x.message||'');$('#kmsg').textContent=/^HTTP 404/.test(m)?'The license server answered "404 not found". Check the Project URL in the app settings, and that supabase_licenses.sql was run in Supabase.':/^HTTP (401|403)/.test(m)?'The license server refused the request ('+m+'). Check the publishable key in the app settings.':/^HTTP/.test(m)?'License server error ('+m+'). Please try again shortly.':'Cannot reach the license server. Check your internet connection and the Project URL, then try again.'}return false}
 async function recheck(){try{const r=await checkKey(LIC.key);if(r&&r.valid){LIC={...LIC,holder:r.holder||'',plan:r.plan||'',expires:r.expires_at||'',lastOk:Date.now(),offline:false};saveLic(LIC);alert('License verified.');render()}else{alert(LWHY[r&&r.reason]||'License not valid.');}}catch(e){alert('Cannot reach the license server.')}}
 async function deactivate(){if(!confirm('Deactivate this device? You can then use the key on another device. Your project data stays on this device.'))return;try{await rpc('release_device',{p_key:LIC.key,p_device:devId()})}catch(e){alert('Could not reach the license server — try again when online.');return}
  try{localStorage.removeItem(LK)}catch(x){}LIC=null;if(S)await save();location.reload()}
