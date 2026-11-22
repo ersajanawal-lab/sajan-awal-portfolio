@@ -1,0 +1,61 @@
+{
+  "users": [
+    { "u": "admin", "p": "1a4lh3u", "role": "Admin" },
+    { "u": "engineer", "p": "j8uic9", "role": "Engineer" },
+    { "u": "viewer", "p": "gaems8", "role": "Viewer" }
+  ],
+  "proj": [
+    { "k": "Project", "v": "Construction of Test-commercial" },
+    { "k": "Employer", "v": "Test Investor" },
+    { "k": "Contract No", "v": "SAN001" },
+    { "k": "Consultant", "v": "Test Design" },
+    { "k": "Contractor", "v": "Test Builders" },
+    { "k": "Contract Amount Without VAT", "v": "NRs.1378386282" },
+    { "k": "Contract Signed On...", "v": "September 30, 2026" },
+    { "k": "Orginal Completion Date", "v": "October 7, 2027" }
+  ],
+  "staff": [
+    { "name": "A", "cat": "Contractor Representative", "site": "Office", "phone": "" },
+    { "name": "B", "cat": "Project Manager", "site": "Site", "phone": "" },
+    { "name": "C", "cat": "APM", "site": "Site", "phone": "" },
+    { "name": "D", "cat": "Sr. Civil Engineer", "site": "Site", "phone": "" },
+    { "name": "E", "cat": "Office Engineer", "site": "Site", "phone": "" },
+    { "name": "F", "cat": "Site Engineer", "site": "Site", "phone": "" },
+    { "name": "G", "cat": "MEP Engineer", "site": "Site", "phone": "" },
+    { "name": "H", "cat": "Surveyor", "site": "Site", "phone": "" },
+    { "name": "I", "cat": "Lab Incharge", "site": "Site", "phone": "" },
+    { "name": "J", "cat": "Store Keeper", "site": "Site", "phone": "" }
+  ],
+  "eqp": [
+    { "name": "EXCAVATOR", "model": "Hyundai", "nos": 2, "loc": "TBP", "rem": "2 on work" },
+    { "name": "Mini Excavator", "model": "Takeuchi", "nos": 2, "loc": "TBP", "rem": "1 on work" },
+    { "name": "Backhoe-1,JCB", "model": "", "nos": 2, "loc": "Dharahara", "rem": "on work" },
+    { "name": "Loader", "model": "", "nos": 2, "loc": "Dharahara", "rem": "1 on work" },
+    { "name": "Mini Loader", "model": "", "nos": 2, "loc": "Dharahara", "rem": "1 on work" },
+    { "name": "Liftall", "model": "JCB", "nos": 1, "loc": "Hume pipe", "rem": "on work" },
+    { "name": "Generator", "model": "15 KVA", "nos": 1, "loc": "Dharahara", "rem": "As required" },
+    { "name": "Generator", "model": "62.5 KVA", "nos": 2, "loc": "Dharahara", "rem": "As required" },
+    { "name": "Transit Mixture", "model": "", "nos": 3, "loc": "Dhungedhara", "rem": "2 on work" },
+    { "name": "Concrete Mixture", "model": "", "nos": 3, "loc": "Dharahara", "rem": "yard" },
+    { "name": "Hydraulic rebar cutter", "model": "", "nos": 3, "loc": "Dharahara", "rem": "on work" },
+    { "name": "Formwork cutter", "model": "", "nos": 2, "loc": "Dharahara", "rem": "working" },
+    { "name": "60:40 Roller", "model": "", "nos": 1, "loc": "Dharahara", "rem": "on work" },
+    { "name": "Monkey Jumper", "model": "", "nos": 1, "loc": "Dharahara", "rem": "yard" }
+  ],
+  "subs": [
+    { "name": "S1", "trade": "Flagstone", "contact": "98*********", "contract": 1000000, "cert": 15000, "paid": 12000, "ret": 5 },
+    { "name": "S2", "trade": "Masonry", "contact": "98*********" },
+    { "name": "S3", "trade": "Clay tiles", "contact": "985********" }
+  ],
+  "boq": [
+    { "id": "17", "d": "Earthwork in excavation", "u": "CU.M", "qty": 122711, "rate": 1000 },
+    { "id": "19", "d": "Earthfilling with excavated materials", "u": "CU.M", "qty": 37806.3, "rate": 400 },
+    { "id": "29", "d": "Gravel packing", "u": "CU.M", "qty": 2629, "rate": 4000 },
+    { "id": "34", "d": "M20 ( 1:1.5:3)", "u": "CU.M", "qty": 1348, "rate": 14000 },
+    { "id": "35", "d": "M25 (1:1:2)", "u": "CU.M", "qty": 6296, "rate": 16000 },
+    { "id": "36", "d": "M30 Grade Concrete", "u": "CU.M", "qty": 10493, "rate": 17000 },
+    { "id": "40", "d": "Reinforcement", "u": "MT", "qty": 5500, "rate": 105000 },
+    { "id": "42", "d": "Formwork", "u": "SQ.M.", "qty": 63853, "rate": 650 },
+    { "id": "46", "d": "Polymer coating waterproofing", "u": "SQ.M.", "qty": 0, "rate": 0 }
+  ]
+}
