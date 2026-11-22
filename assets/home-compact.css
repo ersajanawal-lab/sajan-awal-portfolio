@@ -32,9 +32,9 @@
 
 .compact-portrait {
   display: block;
-  width: 132px;
-  height: 132px;
-  margin: 0 auto 18px;
+  width: 264px;
+  height: 264px;
+  margin: 0 auto 24px;
   object-fit: cover;
   object-position: center top;
   border-radius: 50%;
@@ -246,9 +246,9 @@
   }
 
   .compact-portrait {
-    width: 112px;
-    height: 112px;
-    margin-bottom: 14px;
+    width: 224px;
+    height: 224px;
+    margin-bottom: 16px;
   }
 
   .career-stop {
