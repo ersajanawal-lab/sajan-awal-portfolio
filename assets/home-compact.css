@@ -40,6 +40,24 @@
   border-radius: 50%;
   border: 4px solid var(--bg);
   outline: 2px solid var(--gold);
+  animation: portrait-float 6s ease-in-out infinite;
+}
+
+@keyframes portrait-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .compact-portrait {
+    animation: none;
+  }
 }
 
 .compact-experience {
@@ -212,8 +230,9 @@
   }
 
   .compact-portrait {
-    width: 112px;
-    height: 112px;
+    width: 224px;
+    height: 224px;
+    margin-bottom: 22px;
   }
 
   .intro-column .professional-title {
